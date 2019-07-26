@@ -1,0 +1,63 @@
+<!-- <div *ngIf='todosForUser$ | async as todos'>
+	<table *ngIf="todos">
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Title</th>
+				<th>Completed?</th>
+			</tr>
+		</thead>
+		<tbody *ngFor="let todo of todos">
+			<tr>
+				<td>{{ todo.userId }}</td>
+				<td>{{ todo.title }}</td>
+				<td>{{ todo.completed }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div> -->
+
+<div *ngIf='users$ | async as users'>
+	<select (change)="onSelected($event.target.value)">
+    <option value="">--Select a user--</option>
+    <option *ngFor="let user of users"
+            [value]="user.username">{{ user.name }}</option>
+  </select>
+</div>
+
+<div *ngIf='dataForUser$ | async as data'>
+	<h2>Data for: {{ data.name }}</h2>
+	<table *ngIf="data.todos">
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Title</th>
+				<th>Completed?</th>
+			</tr>
+		</thead>
+		<tbody *ngFor="let todo of data.todos">
+			<tr>
+				<td>{{ todo.userId }}</td>
+				<td>{{ todo.title }}</td>
+				<td>{{ todo.completed }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<p></p>
+	<table *ngIf="data.posts">
+		<thead>
+			<tr>
+				<th>User</th>
+				<th>Title</th>
+				<th>Body</th>
+			</tr>
+		</thead>
+		<tbody *ngFor="let post of data.posts">
+			<tr>
+				<td>{{ post.userId }}</td>
+				<td>{{ post.title }}</td>
+				<td>{{ post.body }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
