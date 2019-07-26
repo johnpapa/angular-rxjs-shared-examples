@@ -1,3 +1,6 @@
-# angular-todos-deborahk-eq8twv
+# angular-rxjs-shared-examples
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-todos-deborahk-eq8twv)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-rxjs-shared-examples)
+
+Credits
+- Thank you to Deborah Kurata for the great examples
